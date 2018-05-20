@@ -43,7 +43,7 @@ int main(int argc, char * argv[]) {
 	string input = (argv[1]);
 	output = (argv[2]);
 	int nw = atoi(argv[3]);
-	int delay = atoi(argv[4]);
+	
 	
 
 	auto t1 = std::chrono::high_resolution_clock::now();
