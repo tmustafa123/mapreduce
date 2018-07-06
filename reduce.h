@@ -18,7 +18,7 @@ public:
 	~Reduce();
 	std::vector<KEYPAIR> pairs;
 	
-	bool shuffle(Reduce *reduce,std::map<std::string, int> map ,int dest ) {
+	void shuffle(Reduce *reduce,std::map<std::string, int> map ,int dest ) {
 		KEYPAIR y;
 		std::unique_lock<std::mutex> lock(mtx);
 		for (std::map<std::string, int>::iterator it = map.begin(); it != map.end(); ++it) {
@@ -26,7 +26,7 @@ public:
 			y.Val= it->second;
 			reduce[dest].pairs.push_back(y);	
 		}
-		return true;
+		return ;
 	}
 
 	void compute(std::string filename) {
