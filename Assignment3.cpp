@@ -120,11 +120,7 @@ void mapper(Parser& tq, Reduce *worker_ds, int nw,  RANGE range)
 	
 	int x = 0;
 	for (auto i : local) {
-		while (true) {   
-			bool check = rd.shuffle(worker_ds,i.map, x);
-			if (check) {
-				break;
-			}
+		check = rd.shuffle(worker_ds,i.map, x);
 		} 
 		x++;
 	}
