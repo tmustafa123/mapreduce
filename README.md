@@ -1,5 +1,8 @@
 # task3
 
-Use the command "input.txt output.txt nw"
+```Problem```
+Using C++ only, implement an object providing the programmer with a parallel google mapreduce pattern. The user must be able to provide two filenames (an input and an output file) the mapper (function<vector<pair<Tkey,Tvalue>>(string)>) processing lines of the file, the reducer (function<Tvalue(Tvalue,Tvalue)>) and a method void compute(void) to compute the results in the output file out of the lines of the input file.
 
-Initially it takes take as the file is been divided into chunks for each worker. Once complete the threads execute. 
+
+```Arguments``` "input.txt output.txt nw"
+
